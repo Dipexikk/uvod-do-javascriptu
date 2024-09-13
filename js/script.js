@@ -1,14 +1,21 @@
+let i = 1;
 
-
-function Add(){
+function Add(isEmoji = false) {
     let input = document.getElementById("input");
     let output = document.getElementById("output");
-    /*document.getElementById("output").innerHTML = input.value;*/
 
-    console.log("Hodnota v inputu je: ", input);
+ 
+    if (isEmoji) {
+        output.innerHTML += input.value + "🍆<br>";
+    } else {
 
-    console.log("Hodnota v outputu je: ", output);
+        output.innerHTML += input.value + "";
+        input.value = "";
+    }
+}
 
-    output.innerHTML += i + ". " + input.value + "<br>";
-    i++;
+function clearContent() {
+    let output = document.getElementById("output");
+    output.innerHTML = ""; // Vyprázdníme obsah výstupu
+    i = 1; // Resetujeme číslování
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přidávání Emoji</title>
+
+    <script src="/js/script.js" defer></script> <!-- Odkaz na JavaScript soubor -->
+</head>
+<body>
+    <main>
+        <section>
+            <!-- Textové pole pro zadání textu -->
+            <label for="input">Zadej text:</label>
+            <input type="text" id="input">
+
+
+            <button onclick="Add()">Přidej</button>
+
+            <button onclick="Add(true)">🍆</button>
+            <!-- Tlačítko pro smazání obsahu -->
+            <button onclick="clearContent()">Smaž vše</button>
+        </section>
+
+        <section>
+            <!-- Výstupní sekce, kde se bude text zobrazovat -->
+            <p id="output"></p>
+        </section>
+    </main>
+</body>
+</html>
